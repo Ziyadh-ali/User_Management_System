@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/addUser.css">
+    <title>Add User</title>
+</head>
+<body>
+    <form class="form form-signup" action="/admin/insertUser" method="post">
+        <fieldset>
+          
+          <div class="input-block">
+            <label class="signup-username" for="signup-username">Username</label>
+            <input id="signup-email" type="text" name="username" required>
+          </div>
+          <div class="input-block">
+            <label class="signup-username" for="signup-email">E-mail</label>
+            <input id="signup-email" type="email" name="email" required>
+          </div>
+          <div class="input-block">
+            <label class="signup-username" for="signup-password">Password</label>
+            <input id="signup-password" type="password" name="password" required>
+          </div>
+          <h4 class="msg"><% if (msg !== undefined) { %>
+            <p style="color: lightgreen"><%= msg %></p>
+            <% } %> 
+            <% if (emsg !== undefined) { %>
+            <p style="color: red"><%= emsg %></p>
+            <% } %></h4>
+        </fieldset>
+        <button type="submit" class="btn-signup">Add User</button>
+        <a class="back" href="/admin/dashboard">Dashboard</a>
+      </form>
+</body>
+</html>
